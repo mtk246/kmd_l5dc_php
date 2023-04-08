@@ -1,0 +1,11 @@
+version: '3.9'
+name: dock-php-apache-1
+services:
+  php_apache:
+    container_name: php_apache
+    image: nimmis/apache-php7
+    volumes:
+      - ./app/public:/var/www/html:Z
+    ports:
+      - 8085:80
+    restart: always
