@@ -18,5 +18,5 @@ if it's showing `Up <num> seconds`, then it is sure that container is running pr
 <img width="952" alt="Screen Shot 2023-04-08 at 11 17 53" src="https://user-images.githubusercontent.com/54733323/230703658-f16b35f3-c087-4da8-a869-bec01f9b07eb.png">
 
 
-- after that, open your browser using `http://localhost:<your_container_port>`, for me it's `https://localhost:8085`,
+- after that, open your browser using `http://localhost:<your_container_port>`, for me it's `http://localhost:8085`,
 - enter into your desired folder to see website content.
