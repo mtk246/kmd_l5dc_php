@@ -1,5 +1,5 @@
-version: '3.9'
-name: dock-php-apache-1
+version: '3'
+
 services:
   php_apache:
     container_name: kmd_l5dc_php
