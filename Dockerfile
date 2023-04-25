@@ -1,5 +1,5 @@
 # Use nimmis/apache-php7 as the base image
-FROM nimmis/apache-php7
+FROM jelastic/apachephp:latest
 
 # Copy the application code into the container
 COPY ./app/public /var/www/html

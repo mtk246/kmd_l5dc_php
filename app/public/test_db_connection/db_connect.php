@@ -1,15 +1,12 @@
 <?php
-$servername = "db";
-$username = "db_user";
-$password = "db_user_pass";
-$dbname = "app_db";
+  $servername = "db";
+  $username = "root";
+  $password = "my_secret_password";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
+  // Create connection
+  $conn = mysqli_connect($servername, $username, $password);
+  // Check connection
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
 ?>
