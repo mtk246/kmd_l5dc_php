@@ -3,7 +3,7 @@ version: '3'
 services:
   php_apache:
     container_name: kmd_l5dc_php
-    image: jelastic/apachephp:latest
+    image: nimmis/apache-php7
     volumes:
       - ./app/public:/var/www/html:Z
     ports:
@@ -12,7 +12,7 @@ services:
       - db
     restart: always
   db:
-    image: mysql:latest
+    image: mysql:5.7
     container_name: mysql_db
     environment:
       MYSQL_ROOT_PASSWORD: my_secret_password
