@@ -1,3 +1,7 @@
+<?php
+    $main_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://{$_SERVER['HTTP_HOST']}/";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +20,19 @@
         <div class="text-center">
             <h1>KMD Repo</h1>
         </div>
-        <div class="row mt-5">
+        <div id="description" class="w-50 my-5">
+            <h3> About repository </h3>
+            <ul>
+                <li>A collection of Docker containers that includes Apache, PHP, MySQL, and phpMyAdmin.</li>
+                <li>You can easily clone the repository and start the containers by running the <code>docker-compose up -d</code> command.</li>
+                <li>Once the containers are up and running, you can connect to the MySQL database using phpMyAdmin.</li>
+                <li>The repository also includes a <code>tempDB.sql</code> file that contains dummy data to create a database and insert dummy data.</li>
+                <li>If you don't want to manually import the .sql file, you can navigate to <code>&lt;url&gt;/test_db_connection/create_info.php</code>, which automatically reads the .sql file and makes changes to the database.</li>
+                <li>Additionally, you can test the database connection by checking the PHP info page located at <code>app/public/test_db_connection/phpinfo.php</code>.</li>
+                <li>This repository is a convenient way for developers to quickly set up a development environment with Apache, PHP, MySQL, and phpMyAdmin using Docker containers.</li>
+            </ul>
+        </div>
+        <div class="row">
             <div class="col text-nowrap">
                 <h3> Clone this repo on</h3>
             </div>
@@ -39,6 +55,14 @@
                 target="_blank"
             >
                 <i class="fa-4x fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div>
+            <a
+                href="<?php echo $main_url; ?>"
+                class="btn btn-primary"
+            >
+                Back to Home
             </a>
         </div>
     </div>
