@@ -17,10 +17,10 @@
 </head>
 <body>
     <div class="container d-flex justify-content-center align-items-center flex-column" id="section-1">
-        <div class="text-center">
+        <div class="text-center mt-5">
             <h1>KMD Repo</h1>
         </div>
-        <div id="description" class="w-50 my-5">
+        <div id="description" class="my-5">
             <h3> About repository </h3>
             <ul>
                 <li>A collection of Docker containers that includes Apache, PHP, MySQL, and phpMyAdmin.</li>
